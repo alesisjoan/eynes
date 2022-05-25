@@ -15,8 +15,8 @@ class TestMatrix(unittest.TestCase):
         """
         matrix = Matrix().seed_matrix()
         Matrix().print_matrix(matrix)
-        self.assertEqual(len(matrix), MAX_COLUMNS)
-        self.assertEqual(len(matrix[0]), MAX_ROWS)
+        self.assertEqual(MAX_COLUMNS, len(matrix))
+        self.assertEqual(MAX_ROWS, len(matrix[0]) )
 
         m1 = self._get_random_row(matrix)
         self.assertTrue(type(m1[0]) == int)
